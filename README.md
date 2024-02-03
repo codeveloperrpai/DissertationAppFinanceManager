@@ -29,7 +29,7 @@ The Financial Management App is a web application designed to help users manage 
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/codeveloperrpai/DissertationAppFinanceManager.git
 
 Install dependencies:
 
