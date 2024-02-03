@@ -1,0 +1,8 @@
+# Ignore Node.js related files
+node_modules/
+
+# Ignore Python virtual environment
+env/
+
+# Ignore VSCode configuration files
+.vscode/

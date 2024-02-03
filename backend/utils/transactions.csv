@@ -1,0 +1,49 @@
+account_name,amount,category,description,date
+ICICI Bank,5000,Salaries,Salary payment,2024-01-24
+HDFC Bank,1500,Toiletries,Office supplies,2024-01-25
+Cash,200,Food,Lunch expense,2024-01-26
+IDBI Bank,300,Reimbursements,Travel reimbursement,2024-01-27
+HDFC Bank,100,Cab Service,Cab fare,2024-01-28
+Cash,250,Toiletries,Personal care items,2024-01-29
+ICICI Bank,1200,Food,Dinner expense,2024-01-30
+Cash,50,Cab Service,Short trip,2024-01-31
+Cash,100,Reimbursements,Expense reimbursement,2024-02-01
+IDBI Bank,800,Salaries,Salary payment,2024-02-02
+ICICI Bank,200,Toiletries,Shopping,2024-02-03
+HDFC Bank,300,Food,Groceries,2024-02-04
+Cash,40,Cab Service,Local transport,2024-02-05
+IDBI Bank,500,Reimbursements,Conference expenses,2024-02-06
+HDFC Bank,150,Toiletries,Personal hygiene,2024-02-07
+Cash,120,Food,Dinner with friends,2024-02-08
+ICICI Bank,450,Cab Service,Commute to work,2024-02-09
+Cash,80,Reimbursements,Travel expenses,2024-02-10
+HDFC Bank,200,Salaries,Salary payment,2024-02-11
+ICICI Bank,100,Food,Lunch expense,2024-02-12
+Cash,30,Cab Service,Short trip,2024-02-13
+IDBI Bank,300,Toiletries,Office supplies,2024-02-14
+HDFC Bank,120,Food,Snacks,2024-02-15
+Cash,60,Reimbursements,Expense reimbursement,2024-02-16
+ICICI Bank,400,Toiletries,Personal care items,2024-02-17
+Cash,250,Cab Service,Weekend outing,2024-02-18
+IDBI Bank,700,Food,Dinner with family,2024-02-19
+HDFC Bank,180,Reimbursements,Travel reimbursement,2024-02-20
+ICICI Bank,300,Salaries,Salary payment,2024-02-21
+Cash,50,Cab Service,Short trip,2024-02-22
+Cash,90,Toiletries,Shopping,2024-02-23
+HDFC Bank,250,Food,Lunch expense,2024-02-24
+IDBI Bank,100,Reimbursements,Expense reimbursement,2024-02-25
+ICICI Bank,400,Cab Service,Commute to work,2024-02-26
+Cash,80,Toiletries,Personal hygiene,2024-02-27
+HDFC Bank,200,Food,Groceries,2024-02-28
+Cash,30,Reimbursements,Travel expenses,2024-02-29
+ICICI Bank,150,Salaries,Salary payment,2024-03-01
+HDFC Bank,100,Food,Dinner expense,2024-03-02
+Cash,40,Cab Service,Local transport,2024-03-03
+IDBI Bank,300,Toiletries,Office supplies,2024-03-04
+ICICI Bank,120,Food,Snacks,2024-03-05
+Cash,60,Reimbursements,Conference expenses,2024-03-06
+HDFC Bank,180,Toiletries,Personal care items,2024-03-07
+Cash,250,Cab Service,Weekend outing,2024-03-08
+IDBI Bank,700,Food,Dinner with family,2024-03-09
+ICICI Bank,300,Reimbursements,Travel reimbursement,2024-03-10
+HDFC Bank,200,Salaries,Salary payment,2024-03-11
