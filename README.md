@@ -6,12 +6,6 @@ This is a Flask application that provides features for financial management.
 - [Overview](#overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [API Documentation](#api-documentation)
-- [Database Models](#database-models)
-- [Routes and Endpoints](#routes-and-endpoints)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
