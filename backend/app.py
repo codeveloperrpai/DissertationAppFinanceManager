@@ -17,6 +17,7 @@ import datetime
 import base64
 import logging
 from sqlalchemy import func, desc
+import os
 import pandas as pd
 
 # UTILS
@@ -31,6 +32,13 @@ db.init_app(app)
 
 with app.app_context():
     db.create_all()
+    
+# Define the log folder path
+log_folder_path = "./logs"
+
+# Check if the log folder exists, if not, create it
+if not os.path.exists(log_folder_path):
+    os.makedirs(log_folder_path)
 
 log_file_name = datetime.datetime.today().strftime("%m.%d.%Y")
 logging.basicConfig(filename=f'./logs/{log_file_name}.log', encoding='utf-8', level=logging.DEBUG)
