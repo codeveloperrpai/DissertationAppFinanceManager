@@ -6,3 +6,5 @@ env/
 
 # Ignore VSCode configuration files
 .vscode/
+
+__pycache__/
