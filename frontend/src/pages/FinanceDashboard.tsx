@@ -5,7 +5,7 @@ import { Button, Card, Divider, Form, Input, Spin, Table, Tabs, Typography } fro
 import moment, { months } from 'moment';
 import { User } from '../types';
 import { host, Title } from '..';
-import { BackwardFilled, CloseOutlined, EditTwoTone, HistoryOutlined, LoginOutlined, UploadOutlined } from '@ant-design/icons';
+import { BackwardFilled, CloseOutlined, DashboardOutlined, EditTwoTone, HistoryOutlined, LoginOutlined, UploadOutlined } from '@ant-design/icons';
 import { Bar, Doughnut, Line, Pie, Radar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement } from 'chart.js';
 import backgroundImage from '../props/background.jpg';
@@ -269,6 +269,10 @@ const FinanceDashboard = () => {
         fetchData();
     }, [transactions]);
 
+    const handleDashboardClick = () => {
+        window.open('http://localhost:3001/d/ea6be77b-c72f-4314-b8a7-1d6d4b3f1f5a/financial-management?orgId=1&from=1704047400000&to=1735669799999&refresh=5s', '_blank');
+    };
+
 
     const onFinish = (values: any) => {
         try {
@@ -379,10 +383,10 @@ const FinanceDashboard = () => {
                         ) : (
                             <Card title="Doughnut Chart Colour Scheme" bordered={true} style={{ height: '50%', justifyContent: 'center' }}>
 
-                            <div style={{ marginTop: '20px' }}>
-                                <Title level={4}>Transactions per Month (Bar Chart)</Title>
-                                <Bar data={monthlyChart} />
-                            </div>
+                                <div style={{ marginTop: '20px' }}>
+                                    <Title level={4}>Transactions per Month (Bar Chart)</Title>
+                                    <Bar data={monthlyChart} />
+                                </div>
                             </Card>
                         )}
                     </div>
@@ -397,11 +401,11 @@ const FinanceDashboard = () => {
                         // <div style={{ marginTop: '10px', padding:'30px' }}>
                         <Card title="Doughnut Chart Colour Scheme" bordered={true} style={{ height: '50%', justifyContent: 'center' }}>
 
-                        <div>
-                            <Title level={4}>Expense Distribution (Doughnut Chart)</Title>
-                            <Doughnut data={categoryChart} />
-                            <Divider type='vertical' />
-                        </div>
+                            <div>
+                                <Title level={4}>Expense Distribution (Doughnut Chart)</Title>
+                                <Doughnut data={categoryChart} />
+                                <Divider type='vertical' />
+                            </div>
                         </Card>
                     )}
 
@@ -462,6 +466,10 @@ const FinanceDashboard = () => {
                 <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>
                     <Button shape="round" type="primary" onClick={() => backToLandingPage()} icon={<BackwardFilled />}>
                         Go back
+                    </Button>
+
+                    <Button size="large" danger type="primary" icon={<DashboardOutlined />} onClick={handleDashboardClick}>
+                        Visualize on Grafana
                     </Button>
 
                     <Button size="small" danger type="primary" icon={<LoginOutlined />}>

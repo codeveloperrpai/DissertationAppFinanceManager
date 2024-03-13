@@ -1,0 +1,565 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 816-524-424
+WARNING:root:401: Unauthorized request made
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:05] "[31m[1mGET /@me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:08] "OPTIONS /login HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.email = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00038s] ('sachin.pai@gmail.com', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:08] "POST /login HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00023s] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:08] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00020s] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:08] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 1.376s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:10] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT category.id AS category_id, category.name AS category_name, category.user_id AS category_user_id 
+FROM category 
+WHERE category.user_id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00038s] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:10] "GET /get_categories HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 2.892s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:11] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 2.888s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:11] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 3.699s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:12] "GET /@me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:12] "[35m[1mGET /get_transactions HTTP/1.1[0m" 500 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 18.79s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:27] "GET /@me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:27] "[35m[1mGET /get_transactions HTTP/1.1[0m" 500 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 47.21s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:56] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 47.22s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:00:56] "GET /get_accounts HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/sachinpai/Desktop/dissertationApp/backend/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 816-524-424
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00079s] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:01:29] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00027s] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:01:29] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 1.812s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:01:30] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[generated in 0.00091s] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:01:30] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 67.77s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:02:36] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 67.77s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:02:36] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 107.7s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:16] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 105.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:16] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 111.4s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:20] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 111.4s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:20] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 113.1s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:22] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT category.id AS category_id, category.name AS category_name, category.user_id AS category_user_id 
+FROM category 
+WHERE category.user_id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00017s] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:22] "GET /get_categories HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 114.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:23] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 114.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:23] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 115.4s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:24] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 113.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:24] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 144.7s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:53] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 142.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:03:53] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 168.1s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:17] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 166.2s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:17] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 170.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:19] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 169s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:19] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 176s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:25] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 174.2s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:25] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 190.7s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:39] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 188.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:39] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 193s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:41] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 191.1s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:42] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 197.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:46] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 195.5s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:46] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 209.8s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:58] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 208s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:04:58] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 226.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:05:15] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 225.1s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:05:15] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 620.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:11:49] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 620.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:11:49] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 736.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:13:45] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 736.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:13:45] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 739s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:13:48] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 737.2s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:13:48] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 853.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:42] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 853.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:42] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 858.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:47] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT category.id AS category_id, category.name AS category_name, category.user_id AS category_user_id 
+FROM category 
+WHERE category.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 745.5s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:47] "GET /get_categories HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 860.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:49] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 860.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:49] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 861.7s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:50] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 859.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:50] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 863.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:52] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 863.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:52] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 865s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:54] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 863.2s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:54] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 866.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:55] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 866.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:55] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 868.9s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:57] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 867.1s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:15:57] "GET /get_transactions HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 944.4s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:17:13] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT account.name AS account_name, account.user_id AS account_user_id, account.balance AS account_balance 
+FROM account 
+WHERE account.user_id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 944.3s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:17:13] "GET /get_accounts HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 954.6s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:17:23] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 952.8s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:17:23] "GET /get_transactions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:19:21] "[31m[1mGET /get_transactions HTTP/1.1[0m" 401 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT user.id AS user_id, user.email AS user_email, user.password AS user_password, user.first_name AS user_first_name, user.last_name AS user_last_name 
+FROM user 
+WHERE user.id = ?
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:[cached since 1110s ago] ('67ea9a00bd434921bcc58bd9b4b7837e', 1, 0)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:19:59] "GET /@me HTTP/1.1" 200 -
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "transaction".id AS transaction_id, "transaction".user_id AS transaction_user_id, "transaction".amount AS transaction_amount, "transaction".category AS transaction_category, "transaction".description AS transaction_description, "transaction".type AS transaction_type, "transaction".account_name AS transaction_account_name, "transaction".date AS transaction_date 
+FROM "transaction" 
+WHERE "transaction".user_id = ? ORDER BY "transaction".date DESC
+INFO:sqlalchemy.engine.Engine:[cached since 1108s ago] ('67ea9a00bd434921bcc58bd9b4b7837e',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:werkzeug:127.0.0.1 - - [10/Mar/2024 14:19:59] "GET /get_transactions HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/sachinpai/Desktop/dissertationApp/backend/utils/fakerCsv.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

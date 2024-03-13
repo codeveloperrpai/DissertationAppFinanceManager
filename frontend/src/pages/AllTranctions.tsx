@@ -5,10 +5,12 @@ import { Button, DatePicker, Divider, Form, Input, Spin, Table, Tabs, Typography
 import moment from 'moment';
 import { User } from '../types';
 import { host, Title } from '..';
-import { BackwardFilled, CloseOutlined, EditTwoTone, HistoryOutlined, LoginOutlined, UploadOutlined } from '@ant-design/icons';
+import { BackwardFilled, CloseOutlined, DownCircleFilled, EditTwoTone, HistoryOutlined, LoginOutlined, UploadOutlined } from '@ant-design/icons';
 // import { Bar, Doughnut, Line, Pie, Radar } from 'react-chartjs-2';
 // import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement } from 'chart.js';
 import backgroundImage from '../props/background.jpg';
+import Papa from 'papaparse';
+
 // ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, PointElement, LineElement);
 
 const { TabPane } = Tabs; // Import Tabs component from Ant Design
@@ -92,6 +94,31 @@ const AllTransactions = () => {
         await httpClient.post("//" + host + "/logout")
         window.location.href = "/"
     }
+
+    const exportToCsv = async () => {
+        try {
+            const csvData = Papa.unparse(filteredData); // Convert filteredData to CSV string
+    
+            // Create a Blob from the CSV data
+            const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    
+            // Create a download link
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.href = url;
+            link.setAttribute('download', 'exported_data.csv');
+            document.body.appendChild(link);
+    
+            // Trigger a click on the link to start the download
+            link.click();
+    
+            // Remove the link from the DOM
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error exporting to CSV:', error);
+        }
+    };
+    
 
     const timeConfig = {
         rules: [{ type: 'object' as any, required: true, message: 'Please select time!' }],
@@ -456,6 +483,11 @@ const AllTransactions = () => {
                             {/* <Button size="large" type="primary" shape="round" icon={<UploadOutlined />}>
                                 Submit
                             </Button> */}
+
+                            <Button shape="round" type="primary" onClick={() => exportToCsv()} icon={<DownCircleFilled />}>
+                                Export to CSV
+                            </Button>
+
                             <Button size='small' danger type="primary" onClick={() => logOutUser()} icon={<LoginOutlined />}>
                                 Log out
                             </Button>
